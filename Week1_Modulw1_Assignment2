@@ -1,1 +1,30 @@
+# Function to check and convert input
+def check_and_convert(value):
+    # Check if the input is an integer
+    if isinstance(value, int):
+        # Convert the integer to a float
+        converted_value = float(value)
+        print(f"The integer value is: {value}")
+        print(f"The converted float value is: {converted_value}")
+    elif isinstance(value, float):
+        # If the input is already a float, print the message
+        print("The input needs no conversion, it is a float.")
+    else:
+        print("The input is neither an integer nor a float.")
 
+# Example usage
+try:
+    # Get input from the user
+    user_input = input("Enter a number: ")
+    
+    # Attempt to convert the input to an integer or float
+    if '.' in user_input:
+        user_input = float(user_input)
+    else:
+        user_input = int(user_input)
+
+    # Call the function to check and convert
+    check_and_convert(user_input)
+
+except ValueError:
+    print("Please enter a valid number.")
