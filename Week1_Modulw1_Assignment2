@@ -1,4 +1,4 @@
-# Function to check and convert input
+# Function to check and convert integer input to float 
 def check_and_convert(value):
     # Check if the input is an integer
     if isinstance(value, int):
